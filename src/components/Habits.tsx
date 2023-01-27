@@ -1,10 +1,5 @@
-interface HabitsProps {
-    count: number;
-    setCount: () => void;
-}
-
-export const Habits = ({count, setCount}: HabitsProps) => {
+export const Habits = () => {
     return (
-        <button onClick={setCount}>O valor está mudando: {count}</button>
+        <div className="w-10 h-10 bg-zinc-900 border-2 border-zinc-800 rounded-lg" />
     )
 }
