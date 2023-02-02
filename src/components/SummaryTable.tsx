@@ -32,9 +32,13 @@ export const SummaryTable = () => {
             {/* HabitsDay */}
             <div className="grid grid-rows-7 grid-flow-col gap-3">
                 {/** PastDays  */}
-                {summaryDates.map((dates, key) => {
-                    return <Habits key={key} />
-                })}
+                {summaryDates.map((dates, key) => (
+                    <Habits 
+                        key={key}
+                        amount={10} 
+                        completed={Math.round(Math.random() * 5)} 
+                    />
+                ))}
                 {/** DaysToFillSummary */}
                 {amountOfDaysToFill > 0 && Array.from({length: amountOfDaysToFill}).map((_,key) => {
                     return <div 
